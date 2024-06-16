@@ -6,13 +6,12 @@
 
 ## Overview
 
-This project uses an ESP32 to fetch and display the morning commute time using the Google Maps API. The commute time is shown on a 0.91 inch 128x32 I2C SSD1306 OLED screen. The system handles errors such as API call failures and displays relevant error messages.
+This project uses an ESP32 to fetch and display the morning commute time using the Google Maps API. The commute time is shown on a 0.91 inch 128x32 I2C SSD1306 OLED screen.
 
 ## Features
 
 - Fetches real-time commute time from Google Maps API.
 - Displays commute time on an OLED screen.
-- Handles errors and displays error messages.
 - Refreshes commute time every 10 minutes.
 
 ## Materials Needed
@@ -53,7 +52,17 @@ This project uses an ESP32 to fetch and display the morning commute time using t
 1. **Clone this repository**:
    ```sh
    git clone https://github.com/your_username/esp32-commute-time-display.git
-   cd esp32-commute-time-display
+   cd esp32-commute-time-display ```
+2. Make sure you are **NOT** using Arduino IDE 2.0. As of writing this, Arduino IDE 2.0 is not compatible with the ESP32 DEVKITV1. I recommend using the legacy version (1.8.19) with the ESP32 DEVKITV1.
+
+3. Install the ESP32 DEVKITV1 in Arduino IDE
+   - Go to ```File > Preferences```
+   - in **Additional Board Manager URLs** enter:
+     
+     ```https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json, http://arduino.esp8266.com/stable/package_esp8266com_index.json```
+   - Hit **Ok**.
+   - Go to ```Tools > Board > Boards Manager...```
+   - Search for **ESP32** and install the **ESP32 by Espressif Systems**
 
 ### Step 4: Install the necessary libraries:
 
